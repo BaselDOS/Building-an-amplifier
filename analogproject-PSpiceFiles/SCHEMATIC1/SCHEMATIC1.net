@@ -1,0 +1,35 @@
+* source ANALOGPROJECT
+V_VCC         N14687 0 5Vdc
+V_VEE         0 N14629 5Vdc
+Q_Q3         N14856 VIN1 N14567 Qbreakn 
+Q_Q4         VOUT1 VIN2 N14571 QbreakN 
+Q_Q2         N14575 N14613 N14629 QbreakN 6
+Q_Q1         N14613 N14613 N14629 QbreakN 
+R_RE1         N14575 N14567  50 TC=0,0 
+R_RE2         N14575 N14571  50 TC=0,0 
+R_Rref         N14613 N14687  4.65k TC=0,0 
+Q_Q6         VOUT1 N14856 N14687 QbreakP 
+Q_Q5         N14856 N14856 N14687 Qbreakp 
+V_Vi1         VIN1 0 DC 0Vdc AC 1mVac 
+V_Vi2         VIN2 0 DC 0Vdc AC -1mVac 
+R_RB11         VIN1 N14687  50k TC=0,0 
+R_RB12         N14629 VIN1  100k TC=0,0 
+R_RB21         VIN2 N14687  50k TC=0,0 
+R_RB22         N14629 VIN2  100k TC=0,0 
+C_C1         N14575 N14567  1.8u  TC=0,0 
+C_C2         N14571 N14575  1.8u  TC=0,0 
+Q_Q7         VOUT2 N14613 N14629 QbreakN 
+Q_Q8         N14687 VOUT1 VOUT2 QbreakN 
+Q_Q9         VOUT3 N46102 N26939 QbreakN 1
+R_Rload         0 N27866  56 TC=0,0 
+R_RB23         N46102 N14687  240k TC=0,0 
+R_RB24         N14629 N46102  50k TC=0,0 
+R_RE3         N14629 N26939  170 TC=0,0 
+C_C3         VOUT2 N46102  1.2n  TC=0,0 
+C_C4         N14629 VOUT3  0.6n  TC=0,0 
+Q_Q11         N57259 N14613 N14629 QbreakN 1
+Q_Q12         N57259 N57259 N14687 QbreakP 
+Q_Q10         VOUT3 N57259 N14687 QbreakP 
+R_RB25         VOUT1 N14687  50k TC=0,0 
+R_RB26         N14613 VOUT1  100k TC=0,0 
+R_R1         VOUT3 N27866  49k TC=0,0 

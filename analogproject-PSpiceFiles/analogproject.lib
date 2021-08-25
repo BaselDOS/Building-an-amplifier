@@ -1,0 +1,8 @@
+* PSpice Model Editor - Version 17.4.0
+*$
+.model Mbreakn NMOS VTO=0.5 KP=500 Lambda=0.05
+*$
+.model Qbreakp PNP BF=100 VA=100
+*$
+.model Qbreakn NPN BF=100 VA=100
+*$

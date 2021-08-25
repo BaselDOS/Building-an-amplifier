@@ -1,0 +1,67 @@
+
+**** 05/27/21 18:09:41 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users\manso\Desktop\analogproject-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../analogproject-pspicefiles/analogproject.lib" 
+* From [PSPICE NETLIST] section of C:\Users\manso\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ANALOGPROJECT
+V_VCC         N14687 0 5Vdc
+V_VEE         0 N14629 5Vdc
+Q_Q3         N14856 VIN1 N14567 Qbreakn 
+Q_Q4         VOUT1 VIN2 N14571 QbreakN 
+Q_Q2         N14575 N14613 N14629 QbreakN 6
+Q_Q1         N14613 N14613 N14629 QbreakN 
+R_RE1         N14575 N14567  50 TC=0,0 
+R_RE2         N14575 N14571  50 TC=0,0 
+R_Rref         N14613 N14687  4.65k TC=0,0 
+Q_Q6         VOUT1 N14856 N14687 QbreakP 
+Q_Q5         N14856 N14856 N14687 Qbreakp 
+V_Vi1         VIN1 0 DC 0Vdc AC 1mVac 
+V_Vi2         VIN2 0 DC 0Vdc AC -1mVac 
+R_RB11         VIN1 N14687  50k TC=0,0 
+R_RB12         N14629 VIN1  100k TC=0,0 
+R_RB21         VIN2 N14687  50k TC=0,0 
+R_RB22         N14629 VIN2  100k TC=0,0 
+C_C1         N14575 N14567  1.7u  TC=0,0 
+C_C2         N14571 N14575  1.7u  TC=0,0 
+Q_Q7         VOUT2 N14613 N14629 QbreakN 
+Q_Q8         N14687 VOUT1 VOUT2 QbreakN 
+R_Rload         0 VOUT3  56 TC=0,0 
+C_C4         N14629 VOUT3  2.43n  TC=0,0 
+C_C3         VOUT2 N43443  4.7u  TC=0,0 
+Q_Q9         N43220 N14613 N14629 QbreakN 
+M_M1         VOUT3 N43443 N43220 N43220 Mbreakn           
+R_R1         VOUT3 N14687  1k TC=0,0 
+
+**** RESUMING bias.cir ****
+.END
+
+ERROR(ORPSIM-15142): Node N43443 is floating
+
